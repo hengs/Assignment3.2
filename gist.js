@@ -11,6 +11,14 @@ function gistlogs(gistDesc, gistId, gistUrl) {
 
 }
 */
+function findId(gistId){
+	for(var x = 0; x < originalGistList.length; x++){
+  			if(originalGistList[x].id == gistlog.id){
+				//favoriteGistList.push(gitlog.id);
+				return originalGistList[x];
+  			}
+
+}}
 
 function createGistList(ul){
 	
@@ -21,6 +29,38 @@ function createGistList(ul){
         li.appendChild(liGists(s));
         ul.appendChild(li);});
     
+}
+function createFavGistList(ul){
+	
+	// from lecture demo
+	//settings.favoriteGists.forEach(function(s){
+	favoriteGistList.forEach(function (s) {
+        var li = document.createElement('li');
+        li.appendChild(lifGists(s));
+        ul.appendChild(li);});
+    
+}
+function lifGists(gistLog){
+	
+	var dl = document.createElement('dl');
+  	var entry = dlfEntry('Description: ', gistLog.description, gistLog);
+  	dl.appendChild(entry.dt);
+  	dl.appendChild(entry.dd);
+  	var entry = dlfEntry('ID: ', gistLog.id, gistLog);
+  	dl.appendChild(entry.dt);
+  	dl.appendChild(entry.dd);
+  	var entry = dlfEntry('URL: ', gistLog.url, gistLog);
+
+  	//url not working
+  	//dl.setAttribute('href', gistLog.url);
+  	dl.appendChild(entry.dt);
+  	dl.appendChild(entry.dd);
+  	dl.appendChild(entry.button);
+  	
+  	
+  	
+  	return dl;
+
 }
 
 function liGists(gistLog){
@@ -45,29 +85,44 @@ function liGists(gistLog){
   	return dl;
 
 }
+function dlfEntry(term, definition, gistLog){
+	var dt = document.createElement('dt');
+	var dd = document.createElement('dd');
+	dt.innerText = term;
+	dd.innerText = definition;
+	//var favg = document.getElementById('favorites');
+	var rbutton = document.createElement('button');
+  	rbutton.innerHTML = "- unFavorite";
+  	
+	
+	
+	return{'dt': dt, 'dd':dd, 'button': fbutton};
+
+}
 function dlEntry(term, definition, gistLog){
 	var dt = document.createElement('dt');
 	var dd = document.createElement('dd');
 	dt.innerText = term;
 	dd.innerText = definition;
-	
+	var favg = document.getElementById('favorites');
 	var fbutton = document.createElement('button');
   	fbutton.innerHTML = "+ Favorite";
   	fbutton.setAttribute("id", gistLog.id);
-  	/*fbutton.onclick = function(){
-  		
-  		for(var x = 0; x < originalGistList.length; x++){
-  			if(originalGistList[i].id == gistlog.id){
-				favoriteGistList.push(gitlog.id);
-  			}
+  	fbutton.onclick = function(){
+  				var favoredGist = findId(gistLog.id);
+				favoriteGistList.push(favoredGist);
+				createFavGistList(document.getElementById("favorites"));
 
-  		}
+  			};
+
   		
-	}
-	*/
+  	
+	
+	
 	return{'dt': dt, 'dd':dd, 'button': fbutton};
 
 }
+
 
 
 function fetchData(){
