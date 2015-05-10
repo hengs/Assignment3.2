@@ -1,0 +1,46 @@
+
+Start: Wed, 22 Apr 2015 18:24:18 -0800
+End: Wed, 22 Apr 2015 21:29:54 -0800
+Tasks: I watched the lecture videos and read the demonstrations, trying to analyze the script.
+
+
+Start: Thu, 23 Apr 2015 17:50:42 -0800
+End: Thu, 23 Apr 2015 21:37:49 -0800
+Tasks: Working on http request but not having much success.
+
+
+Start: Thu, 23 Apr 2015 22:21:57 -0800
+End: Thu, 23 Apr 2015 23:52:32 -0800
+Tasks: working on request but still having issues with status.
+
+
+Start: Fri, 24 Apr 2015 09:11:46 -0800
+End: Fri, 24 Apr 2015 10:22:30 -0800
+Tasks: Not filtering data right from gists
+
+
+Start: Fri, 24 Apr 2015 17:58:51 -0800
+End: Fri, 24 Apr 2015 20:16:52 -0800
+Tasks: Able to connect to URL but unable to display gists on html
+
+
+Start: Sat, 25 Apr 2015 13:12:43 -0800
+End: Sat, 25 Apr 2015 16:28:10 -0800
+Tasks: Working on parsing but unable to appendchild as seen in lecture
+
+
+Start: Sat, 2 May 2015 14:25 -0800
+End: Sat, 2 May 2015 15:24:54 -0800
+Tasks: Revisiting Videos and working on parsing
+
+Start: Tues, 5 May 2015 11:22:32 -0800
+End: Tues, 5 May 2015 12:32:11 -0800
+Tasks: Able to display text on html and working on favorites
+
+Start: Thu, 7 May 2015 19:56:42 -0800
+End: Thu, 7 May 2015 21:12:42 -0800
+Tasks: Unable to push favorites to array
+
+Start: Sat, 9 May 2015 10:56:40 -0800
+End: Sat, 9 May 2015 13:01:10 -0800
+Tasks: Trying to multiple ways to push favorites to array but unable.
