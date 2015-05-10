@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+section2{float: left;}
+section1{float:right;
+}
+</style>
+	<meta charset="utf-8">
+	<title>Gists Favorites</title>
+	<script src="gist.js"></script>
+</head>
+<body>
+	<div id="output"></div>
+	<section>
+	
+		<h5>Fetching Gists</h5>
+		<div id ="pages">
+			<label>Number of Pages</label>
+			<input type="number" name="numpages"><br/>
+		</div>
+		<form id ="languages">
+			<label>Languages of Gist: </label>
+			<input type="radio" name="language" value ="python">Python
+			<input type="radio" name="language" value ="json">JSON
+			<input type="radio" name="language" value ="javascript">Javascript
+			<input type="radio" name="language" value ="sql">SQL
+	
+		</form>
+		<div id="fetch">
+			<input type="button" value="Fetch Gist" onclick="fetchData()">
+		</div>
+	</section>
+	<section2>
+		<p id ="Gists">Git Lists</p>
+		<ul id="originGist">
+		</ul>
+		
+	</section2>
+	<section1>
+		<p id = "favorite-lists">Favorite Gists</p>
+		<ul id = "favorites">
+		</ul>
+	</section1>
+</body>
+</html>
